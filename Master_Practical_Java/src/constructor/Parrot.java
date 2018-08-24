@@ -16,4 +16,9 @@ public class Parrot extends Animal implements Flyable{
 		
 	}
 
+	@Override
+	public void move() {
+		System.out.println("Parrot is moving.");
+	}
+
 }

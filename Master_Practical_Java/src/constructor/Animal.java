@@ -1,6 +1,6 @@
 package constructor;
 
-public class Animal {
+public abstract class Animal {
 	
 	String name;
 	String color;
@@ -18,5 +18,7 @@ public class Animal {
 		System.out.println("Animal is " + name + " and it is " + color + ".");
 		return name;
 	}
+	
+	public abstract void move();
 
 }

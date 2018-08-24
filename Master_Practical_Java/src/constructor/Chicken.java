@@ -6,8 +6,13 @@ public class Chicken extends Animal{
 		
 	}
 	
-	public void Do_something() {
+	public void Lay_eggs() {
 		System.out.println("I just layed some eggs.");
+	}
+
+	@Override
+	public void move() {
+		System.out.println("Chicken is moving.");
 	}
 
 }

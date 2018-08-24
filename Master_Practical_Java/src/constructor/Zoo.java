@@ -3,34 +3,31 @@ package constructor;
 public class Zoo {
 
 	public static void main(String[] args) {
-
-		Animal a1 = new Animal();
-		a1.name = "Gorilla";
-		a1.color = "Black";
+		
+		Bird a1 = new  Bird();
+		a1.name = "Sparrow";
+		a1.color = "Grey";
 		a1.Inspect_animal();
-
+		a1.Inspect();
+		a1.move();
+		
 		System.out.println("\n");
 		
-		Bird a2 = new  Bird();
-		a2.name = "Sparrow";
-		a2.color = "Grey";
+		Parrot a2 = new Parrot();
+		a2.name = "Polly";
+		a2.color = "Red";
 		a2.Inspect_animal();
-		a2.Inspect();
+		a2.Fly();
+		a2.move();
 		
 		System.out.println("\n");
 		
-		Parrot a3 = new Parrot();
-		a3.name = "Polly";
-		a3.color = "Red";
+		Chicken a3 = new Chicken();
+		a3.name = "Chicken";
+		a3.color = "White";
 		a3.Inspect_animal();
-		a3.Fly();
-		
-		System.out.println("\n");
-		
-		Chicken a4 = new Chicken();
-		a4.name = "Chicken";
-		a4.color = "White";
-		a4.Inspect_animal();
+		a3.Lay_eggs();
+		a3.move();
 		
 	}
 
