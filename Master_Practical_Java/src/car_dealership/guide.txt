@@ -1,0 +1,9 @@
+		Employee
+			- handleCustomer(Customer cust, boolean finance, Vehicle vehicle)
+			- if finance is true -> runCreditHistory(Customer cust, double amount)
+			else if (vehicle.getPrice <== cust.cashOnHand)
+				processTransaction(Custome cust, vehicle vehicle)	
+				else
+					tell customer to bring more money
+					
+					use encapsulation

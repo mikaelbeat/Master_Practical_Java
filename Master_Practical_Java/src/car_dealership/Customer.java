@@ -2,12 +2,18 @@ package car_dealership;
 
 public class Customer {
 	
-	private String name;
+	private static String name;
 	private String address;
-	private double cashOnHand;
+	private static double cashOnHand;
+	
+	public Customer(String name, String address, double cashOnHand) {
+		this.name = name;
+		this.address = address;
+		this.cashOnHand = cashOnHand;
+	}
 	
 	
-	public String getName() {
+	public static String getName() {
 		return name;
 	}
 
@@ -27,7 +33,7 @@ public class Customer {
 	}
 
 
-	public double getCashOnHand() {
+	public static double getCashOnHand() {
 		return cashOnHand;
 	}
 
