@@ -8,13 +8,20 @@ public class Employee {
 		this.employeeName = employeeName;
 	}
 	
-	public void sell_car(Customer customer, Vehicle vehicle) {
+	public void sell_car(Customer customer, Vehicle vehicle, boolean finance) {
 			double cash = Customer.getCashOnHand();
 			double price = Vehicle.getPrice();
-		if ( cash < price) {
-			System.out.println("Vehicle is too expensive");
+			double remainder = price - cash;
+			String car = Vehicle.getModel();
+		if (finance == true) {
+			System.out.println("Customer uses credit to buy " + car + ", remainder is " +remainder+ "€.");
 		} else {
-			System.out.println("Car bought!");
+			System.out.println("Customer uses cash to buy " + car + ".");
+			if ( cash < price) {
+				System.out.println("Customer does not have enought money, " + car + " costs " + price + "€ and customer has " + cash + "€.");
+			} else {
+				System.out.println(car + " bought!");
+			}
 		}
 	}
 

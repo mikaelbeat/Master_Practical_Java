@@ -1,16 +1,17 @@
-package car_dealership;
+package car_dealership_solution;
 
 public class Vehicle {
 	
-	private static String model;
-	private static double price;
-	
+	private String model;
+	private double price;
+
 	public Vehicle(String model, double price) {
+		super();
 		this.model = model;
 		this.price = price;
 	}
 
-	public static String getModel() {
+	public String getModel() {
 		return model;
 	}
 
@@ -18,7 +19,7 @@ public class Vehicle {
 		this.model = model;
 	}
 
-	public static double getPrice() {
+	public double getPrice() {
 		return price;
 	}
 

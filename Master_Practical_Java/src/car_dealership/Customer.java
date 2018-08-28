@@ -12,36 +12,29 @@ public class Customer {
 		this.cashOnHand = cashOnHand;
 	}
 	
-	
 	public static String getName() {
 		return name;
 	}
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
 	public String getAddress() {
 		return address;
 	}
-
 
 	public void setAddress(String address) {
 		this.address = address;
 	}
 
-
 	public static double getCashOnHand() {
 		return cashOnHand;
 	}
 
-
 	public void setCashOnHand(double cashOnHand) {
 		this.cashOnHand = cashOnHand;
 	}
-
 
 	public void purchase_car(Vehicle vehicle, Employee emp, boolean finance) {
 		
