@@ -9,18 +9,19 @@ public class Employee {
 	}
 	
 	public void sell_car(Customer customer, Vehicle vehicle, boolean finance) {
-			double cash = Customer.getCashOnHand();
-			double price = Vehicle.getPrice();
+			double cash = customer.getCashOnHand();
+			double price = vehicle.getPrice();
 			double remainder = price - cash;
-			String car = Vehicle.getModel();
+			String car = vehicle.getModel();
+			String cust = customer.getName();
 		if (finance == true) {
-			System.out.println("Customer uses credit to buy " + car + ", remainder is " +remainder+ "€.");
+			System.out.println("Customer " + cust + " uses credit to buy " + car + ", remainder is " +remainder+ "€.");
 		} else {
-			System.out.println("Customer uses cash to buy " + car + ".");
+			System.out.println("Customer " + cust + " uses cash to buy " + car + ".");
 			if ( cash < price) {
-				System.out.println("Customer does not have enought money, " + car + " costs " + price + "€ and customer has " + cash + "€.");
+				System.out.println("Customer " + cust + "does not have enought money, " + car + " costs " + price + "€ and customer has " + cash + "€.");
 			} else {
-				System.out.println(car + " bought!");
+				System.out.println("Customer "+ cust + " bought " + car + " and price was " + price +"€.");
 			}
 		}
 	}

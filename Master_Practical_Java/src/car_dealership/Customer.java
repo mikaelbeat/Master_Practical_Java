@@ -2,9 +2,9 @@ package car_dealership;
 
 public class Customer {
 	
-	private static String name;
+	private String name;
 	private String address;
-	private static double cashOnHand;
+	private double cashOnHand;
 	
 	public Customer(String name, String address, double cashOnHand) {
 		this.name = name;
@@ -12,7 +12,7 @@ public class Customer {
 		this.cashOnHand = cashOnHand;
 	}
 	
-	public static String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -28,7 +28,7 @@ public class Customer {
 		this.address = address;
 	}
 
-	public static double getCashOnHand() {
+	public double getCashOnHand() {
 		return cashOnHand;
 	}
 

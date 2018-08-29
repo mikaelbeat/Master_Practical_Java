@@ -26,8 +26,4 @@ public class Employee {
 		System.out.println("Customer has been approved to purchase the vehicle.");
 	}
 
-
-	
-	
-	
 }
