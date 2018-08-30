@@ -9,6 +9,7 @@ public class Application {
 	public static void main(String[] args) throws FileNotFoundException {
 
 //		writer();
+//		calculator(6, 7);
 		
 		String filePath = System.getProperty("user.dir")+"\\src\\processing_files\\test.txt";
 		File file = new File(filePath);
@@ -20,14 +21,21 @@ public class Application {
 		input.close();
 	}
 	
-	
 	public static void writer() {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter some text: ");
 		String enteredText = input.nextLine();
 		System.out.println(enteredText);
+		input.close();
+	}
+	
+	public static int calculator(int num1, int num2) throws Exception{
+		int remainder = num1 - num2;
+		if(remainder < 0) {
+			throw new Exception("Remainder is less than 0!");
+		}
+		System.out.println("Remainder for numbers is: " + remainder);
+		return remainder;
 	}
 
 }
-
-// 10:47
