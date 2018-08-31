@@ -37,5 +37,4 @@ public class Application {
 		System.out.println("Remainder for numbers is: " + remainder);
 		return remainder;
 	}
-
 }
