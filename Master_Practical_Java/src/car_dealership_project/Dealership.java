@@ -1,4 +1,4 @@
-package car_dealership;
+package car_dealership_project;
 
 public class Dealership {
 
