@@ -9,7 +9,7 @@ import java.util.List;
 
 public class StockFileReader {
 	
-	String filePath = null;
+	String filePath = System.getProperty("user.dir")+"\\stock_analysis_project\\data\\";
 	
 	public StockFileReader(String filePath){
 		this.filePath = filePath;
@@ -36,9 +36,16 @@ public class StockFileReader {
 	 */
 	public List<String> readFileData() throws IOException{
 		List<String> lines = new ArrayList<String>();
-		// Insert your code here..
+		try(BufferedReader br = new BufferedReader(new FileReader(filePath))){
+			// Skip the first line
+			br.readLine();
+			String line = null;
+			// Advance from the second line onwards
+			while((line = br.readLine()) != null) {
+				lines.add(line);
+			}
+		}
 	    return lines;
 	}
-	
 
 }
