@@ -47,7 +47,7 @@ public class Application2 {
 		
 //	public static void makeEmployeeWork(List<? extends Employee> employees) {
 //		for(Accountant emp : (ArrayList<Accountant>)employees) {
-//			emp.work();
+//			emp.work(); 
 //		}
 //	}
 	
