@@ -1,6 +1,6 @@
 package threading;
 
-public class Application {
+public class Basic_Threading {
 
 	public static void main(String[] args) {
 		
