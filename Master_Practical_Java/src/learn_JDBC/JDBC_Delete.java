@@ -16,7 +16,7 @@ public class JDBC_Delete {
 		try {
 			
 			// Establish connection object
-			Connection conn = DriverManager.getConnection(url, "root", "****");
+			Connection conn = DriverManager.getConnection(url, "root", "Password1234");
 			
 			// Create a statement object to send to the database
 			Statement statement = conn.createStatement();
