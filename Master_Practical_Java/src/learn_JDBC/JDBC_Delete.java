@@ -10,7 +10,8 @@ public class JDBC_Delete {
 
 	public static void main(String[] args) {
 		
-		String url = "jdbc:mysql://127.0.0.1:3306/employees_database";
+		String url = "jdbc:mysql://127.0.0.1:3306/employees_database?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+
 		int rowsAffected;
 		
 		try {
