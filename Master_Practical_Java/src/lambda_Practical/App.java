@@ -38,7 +38,7 @@ public class App {
 	
 	public static void printCars(List<Car> cars, Predicate<Car> predicate) {
 		for(Car c : cars) {
-			if(predicate.test(c)) { //18:14
+			if(predicate.test(c)) {
 				c.printCar();
 			}
 		}
