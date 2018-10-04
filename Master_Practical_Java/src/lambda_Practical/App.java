@@ -21,7 +21,23 @@ public class App {
 				new Car("Mitsubishi", "Lancer", "White", 20000),
 				new Car("Jeep", "Wrangler", "Red", 24500)
 				);
-
+			
+			System.out.println("Printing cars in price range 18000 - 22000");
+			printCars(cars, (c) -> c.getPrice() >= 18000 && c.getPrice() <= 22000);
+			
+			System.out.println("\nPrinting blue cars.");
+			printCars(cars, (c) -> c.getColor().equals("Blue"));
+			
+//			printCarsPriceRange(cars, 1800, 22000);
+//			printCarsByColor(cars, "Red");
+	}
+	
+	public static void printCars(List<Car> cars, Condition<Car> condition) {
+		for(Car c : cars) {
+			if(condition.test(c)) { //18:14
+				c.printCar();
+			}
+		}
 	}
 	
 	public static void printCarsPriceRange(List<Car> cars, int low, int high) {
