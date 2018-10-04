@@ -2,8 +2,8 @@ package lambda_Practical;
 
 import java.util.Arrays;
 import java.util.List;
-
-import com.mysql.cj.protocol.Protocol.GetProfilerEventHandlerInstanceFunction;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class App {
 	
@@ -21,8 +21,12 @@ public class App {
 				new Car("Mitsubishi", "Lancer", "White", 20000),
 				new Car("Jeep", "Wrangler", "Red", 24500)
 				);
+		
+			Function<Car, String> priceAndColor = (c) -> "Price: " + c.getPrice() + " Color: " + c.getColor();
+			String stringCar = priceAndColor.apply(cars.get(0));
+			System.out.println("Printing car: " + stringCar);
 			
-			System.out.println("Printing cars in price range 18000 - 22000");
+			System.out.println("\nPrinting cars in price range 18000 - 22000");
 			printCars(cars, (c) -> c.getPrice() >= 18000 && c.getPrice() <= 22000);
 			
 			System.out.println("\nPrinting blue cars.");
@@ -32,9 +36,9 @@ public class App {
 //			printCarsByColor(cars, "Red");
 	}
 	
-	public static void printCars(List<Car> cars, Condition<Car> condition) {
+	public static void printCars(List<Car> cars, Predicate<Car> predicate) {
 		for(Car c : cars) {
-			if(condition.test(c)) { //18:14
+			if(predicate.test(c)) { //18:14
 				c.printCar();
 			}
 		}
